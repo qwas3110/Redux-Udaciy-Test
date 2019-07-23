@@ -89,6 +89,32 @@
         }
 
 
+        function handleAddGoal (name, cb) {
+            return (dispath) => {
+                return API.saveGoal(name)
+                    .then((goal) => {
+                        dispath(addGoalAction(goal));
+                        cb();
+                    })
+                    .catch(() => alert('Try Again'))
+            }
+        }
+
+
+
+        function handleDeleteGoal (goal) {
+            return (dispatch) => {
+                dispatch(removeGoalAction(goal.id))
+
+                return API.deleteGoal(goal.id)
+                    .catch(() => {
+                        dispatch(addGoalAction(goal))
+                        alert("Try Again")
+                    })
+            }
+        }
+
+
 
         function todos (state = [], action ) {
             switch (action.type) {
@@ -402,26 +428,33 @@
             addItem = (e) => {
                 e.preventDefault();
 
-                API.saveGoal(this.input.value)
-                    .then(goal => {
-                        this.props.store.dispatch(addGoalAction(goal));
-                        this.input.value = '';
-                    })
-                    .catch(() => {
-                        alert('Try Again!');
-                    })
+                // API.saveGoal(this.input.value)
+                //     .then(goal => {
+                //         this.props.store.dispatch(addGoalAction(goal));
+                //         this.input.value = '';
+                //     })
+                //     .catch(() => {
+                //         alert('Try Again!');
+                //     })
 
+                this.props.store.dispatch(handleAddGoal(
+                    this.input.value,
+                    () => this.input.value = ''
+
+                ))
             };
 
 
             removeItem = (goal) => {
-                this.props.store.dispatch(removeGoalAction(goal.id))
+                // this.props.store.dispatch(removeGoalAction(goal.id))
+                //
+                // return API.deleteGoal(goal.id)
+                //     .catch(() => {
+                //         this.props.store.dispatch(addGoalAction(goal))
+                //         aler('Try Again')
+                //     })
 
-                return API.deleteGoal(goal.id)
-                    .catch(() => {
-                        this.props.store.dispatch(addGoalAction(goal))
-                        aler('Try Again')
-                    })
+                this.props.store.dispatch(handleDeleteGoal(goal))
             };
 
             render() {
