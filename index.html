@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.7.2/redux.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -51,33 +52,33 @@
         }
 
 
-        function createStore (reduce) {
-
-            let state;
-
-            let listeners = [];
-
-
-            const getState = () => state;
-
-            const subscribe = (listener) => {
-                listeners.push(listener);
-                return () => {
-                    listeners.filter(l => l !==listener);
-                }
-            };
-
-            const dispatch = (action) => {
-                state = reduce(state, action);
-                listeners.forEach(l => l());
-            };
-
-            return {
-                getState,
-                subscribe,
-                dispatch
-            }
-        }
+        // function createStore (reduce) {
+        //
+        //     let state;
+        //
+        //     let listeners = [];
+        //
+        //
+        //     const getState = () => state;
+        //
+        //     const subscribe = (listener) => {
+        //         listeners.push(listener);
+        //         return () => {
+        //             listeners.filter(l => l !==listener);
+        //         }
+        //     };
+        //
+        //     const dispatch = (action) => {
+        //         state = reduce(state, action);
+        //         listeners.forEach(l => l());
+        //     };
+        //
+        //     return {
+        //         getState,
+        //         subscribe,
+        //         dispatch
+        //     }
+        // }
 
 
 
@@ -109,12 +110,12 @@
 
 
 
-        function app (state = {}, action) {
-            return {
-                todos: todos(state.todos, action),
-                goals: goals(state.goals, action)
-            }
-        }
+        // function app (state = {}, action) {
+        //     return {
+        //         todos: todos(state.todos, action),
+        //         goals: goals(state.goals, action)
+        //     }
+        // }
 
 
 
@@ -159,7 +160,10 @@
         };
 
 
-        const store = createStore(app);
+        const store = Redux.createStore(Redux.combineReducers({
+            todos,
+            goals
+        }));
 
 
         store.subscribe(() => {
