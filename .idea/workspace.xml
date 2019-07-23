@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499790f6-cc12-434c-bc69-bd3baf771e03" name="Default Changelist" comment="" />
+    <list default="true" id="499790f6-cc12-434c-bc69-bd3baf771e03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,26 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="284" column="64" selection-start-line="284" selection-start-column="64" selection-end-line="284" selection-end-column="64" />
-              <folding>
-                <element signature="e#2105#2588#0" />
-                <element signature="e#2636#2945#0" />
-                <element signature="e#3200#3299#0" />
-                <element signature="e#3344#3444#0" />
-                <element signature="e#3490#3590#0" />
-                <element signature="e#3634#3733#0" />
-                <element signature="e#3778#3878#0" />
-                <element signature="e#3955#3979#0" />
-                <element signature="e#4492#4516#0" />
-                <element signature="e#3944#3992#0" />
-                <element signature="e#4028#4304#0" />
-                <element signature="e#4337#4624#0" />
-                <element signature="e#4655#4909#0" />
-                <element signature="e#5167#5358#0" />
-                <element signature="e#5398#6007#0" />
-                <element signature="e#6048#6451#0" />
-              </folding>
+            <state relative-caret-position="372">
+              <caret line="427" column="22" lean-forward="true" selection-start-line="427" selection-start-column="22" selection-end-line="427" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -152,10 +136,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43520000" />
+    <option name="totallyTimeSpent" value="44016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="742" y="0" width="938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.110371076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -208,26 +193,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="284" column="64" selection-start-line="284" selection-start-column="64" selection-end-line="284" selection-end-column="64" />
-          <folding>
-            <element signature="e#2105#2588#0" />
-            <element signature="e#2636#2945#0" />
-            <element signature="e#3200#3299#0" />
-            <element signature="e#3344#3444#0" />
-            <element signature="e#3490#3590#0" />
-            <element signature="e#3634#3733#0" />
-            <element signature="e#3778#3878#0" />
-            <element signature="e#3955#3979#0" />
-            <element signature="e#4492#4516#0" />
-            <element signature="e#3944#3992#0" />
-            <element signature="e#4028#4304#0" />
-            <element signature="e#4337#4624#0" />
-            <element signature="e#4655#4909#0" />
-            <element signature="e#5167#5358#0" />
-            <element signature="e#5398#6007#0" />
-            <element signature="e#6048#6451#0" />
-          </folding>
+        <state relative-caret-position="372">
+          <caret line="427" column="22" lean-forward="true" selection-start-line="427" selection-start-column="22" selection-end-line="427" selection-end-column="22" />
         </state>
       </provider>
     </entry>

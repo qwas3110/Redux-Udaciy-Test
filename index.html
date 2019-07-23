@@ -58,12 +58,20 @@
         const TOGGLE_TODO = 'TOGGLE_TODO';
         const ADD_GOAL = 'ADD_GOAL';
         const REMOVE_GOAL = 'REMOVE_GOAL';
+        const RECEIVE_DATA = 'RECEIVE_DATA'
         //随机获取一个id
         function generateId () {
             return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
         }
 
 
+        function receiveDataAction (todos, goals) {
+            return {
+                type: RECEIVE_DATA,
+                todos,
+                goals
+            }
+        }
 
         function todos (state = [], action ) {
             switch (action.type) {
@@ -74,6 +82,8 @@
                 case TOGGLE_TODO :
                     return state.map(t => t.id !== action.id ? t :
                         Object.assign({}, t, {complete: !t.complete}));
+                case RECEIVE_DATA :
+                    return action.todos;
                 default :
                     return state;
             }
@@ -86,6 +96,8 @@
                     return state.concat([action.goal]);
                 case REMOVE_GOAL :
                     return state.filter(g => g.id !== action.id);
+                case RECEIVE_DATA :
+                    return action.goals;
                 default :
                     return state;
             }
@@ -405,6 +417,15 @@
                 const { store } = this.props;
 
                 store.subscribe(() => this.forceUpdate())
+
+                Promise
+                    .all(([
+                    API.fetchTodos(),
+                    API.fetchGoals()
+                ]))
+                    .then(([todos,goals]) => {
+                        store.dispatch(receiveDataAction(todos,goals))
+                    })
 
             }
 
