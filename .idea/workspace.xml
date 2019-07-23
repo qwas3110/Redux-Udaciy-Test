@@ -18,8 +18,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="188" column="26" lean-forward="true" selection-start-line="188" selection-start-column="26" selection-end-line="188" selection-end-column="26" />
+            <state relative-caret-position="417">
+              <caret line="286" column="14" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="14" />
+              <folding>
+                <element signature="e#2105#2588#0" />
+                <element signature="e#2636#2945#0" />
+                <element signature="e#3200#3299#0" />
+                <element signature="e#3344#3444#0" />
+                <element signature="e#3490#3590#0" />
+                <element signature="e#3634#3733#0" />
+                <element signature="e#3778#3878#0" />
+                <element signature="e#3955#3979#0" />
+                <element signature="e#4492#4516#0" />
+                <element signature="e#3944#3992#0" />
+                <element signature="e#4028#4304#0" />
+                <element signature="e#4337#4624#0" />
+                <element signature="e#4655#4909#0" />
+                <element signature="e#5167#5358#0" />
+                <element signature="e#5398#6007#0" />
+                <element signature="e#6048#6451#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,10 +154,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39629000" />
+    <option name="totallyTimeSpent" value="39870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="742" y="0" width="938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.110371076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -192,8 +211,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="188" column="26" lean-forward="true" selection-start-line="188" selection-start-column="26" selection-end-line="188" selection-end-column="26" />
+        <state relative-caret-position="417">
+          <caret line="286" column="14" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="14" />
+          <folding>
+            <element signature="e#2105#2588#0" />
+            <element signature="e#2636#2945#0" />
+            <element signature="e#3200#3299#0" />
+            <element signature="e#3344#3444#0" />
+            <element signature="e#3490#3590#0" />
+            <element signature="e#3634#3733#0" />
+            <element signature="e#3778#3878#0" />
+            <element signature="e#3955#3979#0" />
+            <element signature="e#4492#4516#0" />
+            <element signature="e#3944#3992#0" />
+            <element signature="e#4028#4304#0" />
+            <element signature="e#4337#4624#0" />
+            <element signature="e#4655#4909#0" />
+            <element signature="e#5167#5358#0" />
+            <element signature="e#5398#6007#0" />
+            <element signature="e#6048#6451#0" />
+          </folding>
         </state>
       </provider>
     </entry>

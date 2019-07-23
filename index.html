@@ -40,6 +40,14 @@
     </div>
 
 
+    <hr />
+
+
+    <div id="app">
+
+    </div>
+
+
 
     <script type="text/javascript">
 
@@ -53,35 +61,6 @@
         function generateId () {
             return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
         }
-
-
-        // function createStore (reduce) {
-        //
-        //     let state;
-        //
-        //     let listeners = [];
-        //
-        //
-        //     const getState = () => state;
-        //
-        //     const subscribe = (listener) => {
-        //         listeners.push(listener);
-        //         return () => {
-        //             listeners.filter(l => l !==listener);
-        //         }
-        //     };
-        //
-        //     const dispatch = (action) => {
-        //         state = reduce(state, action);
-        //         listeners.forEach(l => l());
-        //     };
-        //
-        //     return {
-        //         getState,
-        //         subscribe,
-        //         dispatch
-        //     }
-        // }
 
 
 
@@ -111,14 +90,6 @@
             }
         }
 
-
-
-        // function app (state = {}, action) {
-        //     return {
-        //         todos: todos(state.todos, action),
-        //         goals: goals(state.goals, action)
-        //     }
-        // }
 
 
 
@@ -297,6 +268,68 @@
             document.getElementById('goals')
                 .append(node);
         }
+
+
+
+    </script>
+
+
+    <script type="text/babel">
+        function List (props) {
+            return (
+                <ul>
+                    <li>List</li>
+                </ul>
+            )
+        }
+
+
+        class Todos extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <h1>Todo List</h1>
+
+                        <List/>
+                    </div>
+                );
+            }
+        }
+
+
+        class Goals extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <h1>Goal List</h1>
+
+                        <List/>
+                    </div>
+                );
+            }
+        }
+
+
+
+
+        class App extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <Todos/>
+                        <Goals/>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <App/>,
+            document.getElementById('app')
+        )
 
 
 
