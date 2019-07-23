@@ -276,9 +276,22 @@
 
     <script type="text/babel">
         function List (props) {
+            console.log(props);
             return (
                 <ul>
-                    <li>List</li>
+                    {props.items.map(i => (
+                        <li key={i.id}>
+                            <span
+                                 onClick={() => props.toggle && props.toggle(i)}
+                                 style={{textDecoration: i.complete? 'line-through' : 'none'}}
+                                >
+                                {i.name}
+                            </span>
+                            <button onClick={() => props.remove(i)}>
+                                X
+                            </button>
+                        </li>
+                    ))}
                 </ul>
             )
         }
@@ -300,6 +313,17 @@
             };
 
 
+            removeItem = (todo) => {
+                this.props.store.dispatch(removeTodoAction(todo.id))
+            };
+
+            toggleItem = (todo) => {
+                this.props.store.dispatch(toggleTodoAction(todo.id))
+            };
+
+
+
+
             render() {
                 return (
                     <div>
@@ -316,7 +340,10 @@
                                 >
                             Add Todo
                         </button>
-                        <List/>
+                        <List items={this.props.todos}
+                              remove={this.removeItem}
+                              toggle={this.toggleItem}
+                        />
                     </div>
                 );
             }
@@ -338,6 +365,11 @@
                 }))
             };
 
+
+            removeItem = (goal) => {
+                this.props.store.dispatch(removeGoalAction(goal.id))
+            };
+
             render() {
                 return (
                     <div>
@@ -355,7 +387,9 @@
                             Add Todo
                         </button>
 
-                        <List/>
+                        <List items={this.props.goals}
+                              remove={this.removeItem}
+                        />
                     </div>
                 );
             }
@@ -366,11 +400,25 @@
 
         class App extends React.Component {
 
+            componentDidMount() {
+                const { store } = this.props;
+
+                store.subscribe(() => this.forceUpdate())
+
+            }
+
+
+
             render() {
+
+                const { store } = this.props;
+                const { todos, goals } = store.getState();
+
+
                 return (
                     <div>
-                        <Todos store={this.props.store}/>
-                        <Goals store={this.props.store}/>
+                        <Todos todos={todos}  store={this.props.store}/>
+                        <Goals goals={goals} store={this.props.store}/>
                     </div>
                 );
             }
