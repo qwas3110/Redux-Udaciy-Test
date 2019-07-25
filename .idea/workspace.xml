@@ -18,8 +18,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="464" column="41" lean-forward="true" selection-start-line="464" selection-start-column="41" selection-end-line="464" selection-end-column="41" />
+            <state relative-caret-position="77">
+              <caret line="421" column="25" lean-forward="true" selection-start-line="421" selection-start-column="25" selection-end-line="421" selection-end-column="25" />
+              <folding>
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#6849#7570#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,10 +155,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49015000" />
+    <option name="totallyTimeSpent" value="49420000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="725" y="0" width="955" height="1050" extended-state="0" />
+    <frame x="822" y="0" width="858" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.110371076" />
@@ -201,8 +205,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="464" column="41" lean-forward="true" selection-start-line="464" selection-start-column="41" selection-end-line="464" selection-end-column="41" />
+        <state relative-caret-position="77">
+          <caret line="421" column="25" lean-forward="true" selection-start-line="421" selection-start-column="25" selection-end-line="421" selection-end-column="25" />
+          <folding>
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#6849#7570#0" />
+          </folding>
         </state>
       </provider>
     </entry>
